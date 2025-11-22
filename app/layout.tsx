@@ -1,28 +1,18 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
+import React from "react";
 
-const SansCode = localFont({
-  src: "../public/fonts/GoogleSansCode.ttf"
-});
-
-export const metadata: Metadata = {
+export const metadata = {
   title: "Nimna Pathum",
-  description: "Confessions of a Software Engineer",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body
-        className={`${SansCode.className} antialiased px-32`}
-      >
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

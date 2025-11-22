@@ -1,12 +1,13 @@
-import Button from "@/components/Button";
-import Navbar from "@/components/Navbar";
-import Image from "next/image";
+import LoadingComponent from "@/app/components/LoadingComponent";
 
-export default function Home() {
+// Add an artificial delay so the app/loading.tsx UI is visible for 5 seconds
+export default async function Home() {
+  // 5000 ms delay
+  await new Promise((resolve) => setTimeout(resolve, 5000));
+
   return (
     <div>
-      <Navbar />
-      <Button variation="primary" >HeHe</Button>
+      <LoadingComponent />
     </div>
   );
 }
