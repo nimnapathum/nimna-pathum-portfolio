@@ -1,13 +1,8 @@
-import LoadingComponent from "@/app/components/LoadingComponent";
 
-// Add an artificial delay so the app/loading.tsx UI is visible for 5 seconds
-export default async function Home() {
-  // 5000 ms delay
-  await new Promise((resolve) => setTimeout(resolve, 5000));
-
+export default function Home() {
   return (
-    <div>
-      <LoadingComponent />
+    <div className="w-screen h-screen p-0 m-0 z-0">
+      <p className="text-foreground">This is text</p>
     </div>
   );
 }
