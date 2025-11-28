@@ -1,8 +1,12 @@
 import "./globals.css";
 import React from "react";
+import { APP_CONFIG } from "../constants";
 
 export const metadata = {
-  title: "Nimna Pathum",
+  title: APP_CONFIG.name,
+  description: APP_CONFIG.description,
+  keywords: APP_CONFIG.keywords,
+  authors: [{ name: APP_CONFIG.author }],
 };
 
 export default function RootLayout({
