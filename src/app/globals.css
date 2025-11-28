@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+  --foreground: #f4f4f4;
+  --background: #171717;
+
+  --white-0: #f9f8f6;
+  --white-1: #efe9e3;
+  --white-2: #d9cfc7;
+  --white-3: #c9b59c;
+  --primary: #fd7e14;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-white-0: var(--white-0);
+  --color-white-1: var(--white-1);
+  --color-white-2: var(--white-2);
+  --color-white-3: var(--white-3);
+  --color-primary: var(--primary);
+}
+
+@font-face {
+  font-family: "Google Sans Code";
+  src: url("/fonts/GoogleSansCode.ttf") format("truetype");
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #131313;
+    --foreground: #f4f4f4;
+    --primary: #fd7e14;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Google Sans Code", Arial, Helvetica, sans-serif;
+}
