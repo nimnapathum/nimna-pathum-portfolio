@@ -1,6 +1,6 @@
 // Application constants
 export const APP_CONFIG = {
-  name: "Nimna Pathum Portfolio",
+  name: "Nimna Pathum",
   description: "Full Stack Developer & AI Researcher Portfolio",
   url: "https://nimnapathum.dev",
   author: "Nimna Pathum",
@@ -18,7 +18,7 @@ export const ROUTES = {
 
 export const THEME = {
   colors: {
-    primary: "#3b82f6",
+    primary: "#fd7e14",
     secondary: "#64748b",
     accent: "#06b6d4",
     background: "#0f172a",

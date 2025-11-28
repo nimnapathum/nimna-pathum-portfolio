@@ -19,7 +19,7 @@ const LoadingName: React.FC<LoadingNameProps> = ({
   
   // Typing effect for "Loading..." text
   const { displayText: typingText, isComplete: typingComplete } = useTypingEffect(
-    "Loading...",
+    "Welcome...",
     150,
     500
   );
@@ -63,7 +63,7 @@ const LoadingName: React.FC<LoadingNameProps> = ({
             transition={{ duration: 0.5 }}
             className="flex justify-center items-center"
           >
-            <p className="text-2xl md:text-3xl font-medium text-center">
+            <p className="text-2xl md:text-3xl font-medium text-center text-white">
               {typingText}
               <motion.span
                 animate={{ opacity: [1, 0, 1] }}
@@ -80,11 +80,9 @@ const LoadingName: React.FC<LoadingNameProps> = ({
         {(currentPhase === 'name' || currentPhase === 'complete') && (
           <motion.div
             key="name"
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 1 }}
             animate={{ 
               opacity: 1, 
-              scale: currentPhase === 'complete' ? 0.8 : 1,
-              y: currentPhase === 'complete' ? -100 : 0
             }}
             transition={{ 
               duration: 0.8, 
@@ -95,9 +93,9 @@ const LoadingName: React.FC<LoadingNameProps> = ({
             <Image
               src="/svg/name.svg"
               alt="Nimna Pathum"
-              width={800}
+              width={1000}
               height={200}
-              className="w-full max-w-4xl h-auto object-contain"
+              className="w-full max-w-5xl h-auto object-contain"
               priority
             />
           </motion.div>
